@@ -113,8 +113,8 @@ const projects = [
     title: "BLOGHTECH",
     description:
       "A AI-Powered Prompt your go-to hub for all things tech blogging!",
-    technologies: ["React", "Node.js", "MongoDB", "TensorFlow"],
-    github: "https://github.com/yourusername/ai-ecommerce",
+    technologies: ["Next", "Node.js", "MongoDB", "Tailwind"],
+    github: "https://github.com/harshchinmalliofficial/BLOGTECH",
     live: "https://blogtech-eo99.vercel.app/",
     image: "/blogtech.png", // Moved to public folder
   },
@@ -123,7 +123,7 @@ const projects = [
     title: "CodeClub",
     description:
       "A Educational platform for a student solving coding problems with intregration with code forces api for developing problem solving skills",
-    technologies: ["Solidity", "Web3.js", "React", "Node.js"],
+    technologies: ["React", "Express", "Tailwind", "Node.js"],
     github: "https://github.com/harshchinmalliofficial/CodeClub",
     live: "https://blockchain-supply-demo.vercel.app",
     image: "/CodeClub.png",
@@ -132,7 +132,7 @@ const projects = [
     id: 3,
     title: "PDF CHATBOT",
     description: "A Machine Learning project helping students to chat with PDF",
-    technologies: ["React", "Socket.io", "Express", "Docker"],
+    technologies: ["Pyton", "Langchain", "Pandas"],
     github: "https://github.com/harshchinmalliofficial/PDF-CHATBOT",
     live: "https://collab-ide-demo.vercel.app",
     image: "/placeholder.jpg",
