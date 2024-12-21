@@ -2,37 +2,37 @@
 
 // import { motion } from "framer-motion";
 // import { Github, ExternalLink } from "lucide-react";
-// import blogtech from "../assets/blogtech.png";
+// import Image from "next/image";
 
 // const projects = [
 //   {
 //     id: 1,
-//     title: "BLOGHTECH ",
+//     title: "BLOGHTECH",
 //     description:
-//       " A AI-Powered Prompt your go-to hub for all things tech blogging! .",
-//     technologies: ["React", "Node.js", "MongoDB", "TensorFlow"],
-//     github: "https://github.com/yourusername/ai-ecommerce",
+//       "A AI-Powered Prompt your go-to hub for all things tech blogging!",
+//     technologies: ["Next", "Node.js", "MongoDB", "Tailwind"],
+//     github: "https://github.com/harshchinmalliofficial/BLOGTECH",
 //     live: "https://blogtech-eo99.vercel.app/",
-//     image: blogtech,
+//     image: "/blogtech.png", // Moved to public folder
 //   },
 //   {
 //     id: 2,
 //     title: "CodeClub",
 //     description:
-//       "A Educational platform for a student for developing  problem solving skills ",
-//     technologies: ["Solidity", "Web3.js", "React", "Node.js"],
-//     github: "https://github.com/yourusername/blockchain-supply-chain",
+//       "A Educational platform for a student solving coding problems with intregration with code forces api for developing problem solving skills",
+//     technologies: ["React", "Express", "Tailwind", "Node.js"],
+//     github: "https://github.com/harshchinmalliofficial/CodeClub",
 //     live: "https://blockchain-supply-demo.vercel.app",
-//     image: "/placeholder.svg?height=300&width=400",
+//     image: "/CodeClub.png",
 //   },
 //   {
 //     id: 3,
-//     title: "PDF CHATBOT ",
-//     description: "A Machine Learing project helping students tp chat with PDF",
-//     technologies: ["React", "Socket.io", "Express", "Docker"],
-//     github: "https://github.com/yourusername/collab-ide",
+//     title: "PDF CHATBOT",
+//     description: "A Machine Learning project helping students to chat with PDF",
+//     technologies: ["Pyton", "Langchain", "Pandas"],
+//     github: "https://github.com/harshchinmalliofficial/PDF-CHATBOT",
 //     live: "https://collab-ide-demo.vercel.app",
-//     image: "/placeholder.svg?height=300&width=400",
+//     image: "/Ollama.jpg",
 //   },
 // ];
 
@@ -56,11 +56,15 @@
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 0.5, delay: index * 0.1 }}
 //           >
-//             <img
-//               src={project.image}
-//               alt={project.title}
-//               className="w-full h-48 object-cover"
-//             />
+//             <div className="relative w-full h-48">
+//               <Image
+//                 src={project.image}
+//                 alt={project.title}
+//                 fill
+//                 className="object-cover"
+//                 priority={index === 0}
+//               />
+//             </div>
 //             <div className="p-6">
 //               <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
 //               <p className="text-gray-300 mb-4">{project.description}</p>
@@ -112,17 +116,17 @@ const projects = [
     id: 1,
     title: "BLOGHTECH",
     description:
-      "A AI-Powered Prompt your go-to hub for all things tech blogging!",
+      "An AI-powered blogging platform designed to revolutionize tech blogging. Users can leverage AI prompts to create engaging and informative content effortlessly. The platform integrates seamless UI and advanced backend features for a smooth user experience.",
     technologies: ["Next", "Node.js", "MongoDB", "Tailwind"],
     github: "https://github.com/harshchinmalliofficial/BLOGTECH",
     live: "https://blogtech-eo99.vercel.app/",
-    image: "/blogtech.png", // Moved to public folder
+    image: "/blogtech.png",
   },
   {
     id: 2,
     title: "CodeClub",
     description:
-      "A Educational platform for a student solving coding problems with intregration with code forces api for developing problem solving skills",
+      "An educational platform designed to enhance coding skills. It provides a seamless integration with the Codeforces API, allowing students to solve real-world coding problems and improve their problem-solving abilities. Users earn rewards for completing challenges, fostering a competitive learning environment.",
     technologies: ["React", "Express", "Tailwind", "Node.js"],
     github: "https://github.com/harshchinmalliofficial/CodeClub",
     live: "https://blockchain-supply-demo.vercel.app",
@@ -131,11 +135,12 @@ const projects = [
   {
     id: 3,
     title: "PDF CHATBOT",
-    description: "A Machine Learning project helping students to chat with PDF",
-    technologies: ["Pyton", "Langchain", "Pandas"],
+    description:
+      "A cutting-edge machine learning project that enables users to interact with PDFs through a chatbot interface. Ideal for students and professionals, this tool simplifies information extraction by allowing conversational queries on uploaded documents. Built using advanced natural language processing techniques.",
+    technologies: ["Python", "Langchain", "Pandas"],
     github: "https://github.com/harshchinmalliofficial/PDF-CHATBOT",
     live: "https://collab-ide-demo.vercel.app",
-    image: "/placeholder.jpg",
+    image: "/Ollama.jpg",
   },
 ];
 
@@ -154,7 +159,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -168,7 +173,7 @@ const Projects = () => {
                 priority={index === 0}
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
               <p className="text-gray-300 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -181,7 +186,7 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between mt-auto">
                 <a
                   href={project.github}
                   target="_blank"
