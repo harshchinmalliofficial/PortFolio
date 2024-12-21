@@ -7,7 +7,7 @@ import DynamicBackground from "./components/DynamicBackground";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Your Name - Software Engineer Portfolio",
+  title: "Harsh Chinmalli - My portfolio",
   description:
     "Portfolio showcasing my skills, projects, and achievements as a Software Engineer",
 };
